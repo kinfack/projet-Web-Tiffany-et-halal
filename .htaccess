@@ -1,0 +1,11 @@
+<ifModule mod_headers.c>
+	<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|svg|gif|js|css|swf)$">
+		Header set Cache-Control "max-age=604800, public"
+	</FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+	<FilesMatch "\.(ico|jpg|jpeg|png|svg|gif|js|css|html|php|txt|xml)$">
+		SetOutputfilter DEFLATE
+	</FilesMatch>
+</IfModule>
